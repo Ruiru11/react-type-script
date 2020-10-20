@@ -53,7 +53,7 @@ const Example = () => {
                       setIsOpen(true);
                     }}
                   >
-                    Testing
+                    Generate Joke
                   </button>
                 </CardFooter>
               </CardItem>
