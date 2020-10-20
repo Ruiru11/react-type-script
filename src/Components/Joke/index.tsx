@@ -56,7 +56,7 @@ const Jokes = (props: {
       <ModalOverlay></ModalOverlay>
       <Modal>
         <ModalHeader>
-          <Title>{props.category}</Title>
+          <Title> A random joke from {props.category} category</Title>
           <Close onClick={() => props.onClose()}> {"❌"} </Close>
         </ModalHeader>
 
