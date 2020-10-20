@@ -21,7 +21,7 @@ const getAllCategories = gql`
   }
 `;
 
-const Example = () => {
+const Categories = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [category, setCategory] = React.useState("");
 
@@ -88,4 +88,4 @@ const Example = () => {
   );
 };
 
-export default Example;
+export default Categories;
