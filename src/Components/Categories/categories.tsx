@@ -21,7 +21,7 @@ const getAllCategories = gql`
   }
 `;
 
-const Example = () => {
+const Categories = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [category, setCategory] = React.useState("");
 
@@ -49,8 +49,7 @@ const Example = () => {
           <p>{"✅"} {""}Apollo Client</p>
           <p>{"✅"} {""}TypeScript</p>
           <p>{"✅"}{""} Graphql</p>
-
-
+          <p>{"✅"}{""} Hooks</p>
           <hr className="my-2" />
           <p>
             It uses utility classes for typography and spacing to space content
@@ -88,4 +87,4 @@ const Example = () => {
   );
 };
 
-export default Example;
+export default Categories;
