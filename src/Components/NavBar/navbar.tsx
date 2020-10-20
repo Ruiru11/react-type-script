@@ -17,7 +17,7 @@ const NavComponent = () => {
   return (
     <div>
       <Navbar color="dark"  expand="md">
-        <NavbarBrand href="/">react-apolo</NavbarBrand>
+        <NavbarBrand href="/">react-apolo-test</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse  navbar>
           <Nav className="mr-auto" navbar>
