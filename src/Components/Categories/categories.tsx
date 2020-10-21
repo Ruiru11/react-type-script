@@ -3,6 +3,7 @@ import Joke from "../Joke/index";
 import { gql } from "apollo-boost";
 import { useQuery } from "@apollo/react-hooks";
 import { Jumbotron } from "reactstrap";
+import SuggestionModal from "../Suggest/suggest";
 
 import {
   CardContent,
@@ -24,6 +25,7 @@ const getAllCategories = gql`
 const Categories = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [category, setCategory] = React.useState("");
+  const [modalOpen, setModal] = React.useState(false);
 
   const onClose = () => {
     setIsOpen(false);
@@ -45,16 +47,32 @@ const Categories = () => {
             This is an SAP application that shows of some simple yet powerful
             concepts.
           </p>
-          <p>{"✅"}{""} Styles components</p>
-          <p>{"✅"} {""}Apollo Client</p>
-          <p>{"✅"} {""}TypeScript</p>
-          <p>{"✅"}{""} Graphql</p>
-          <p>{"✅"}{""} Hooks</p>
+
+          <p>
+            {"✅"}
+            {""} Styles components
+          </p>
+          <p>
+            {"✅"} {""}Apollo Client
+          </p>
+          <p>
+            {"✅"} {""}TypeScript
+          </p>
+          <p>
+            {"✅"}
+            {""} Graphql
+          </p>
+          <p>
+            {"✅"}
+            {""} Hooks
+          </p>
           <hr className="my-2" />
           <p>
             It uses utility classes for typography and spacing to space content
             out within the larger container.
           </p>
+          <button onClick={() => setModal(true)}>Suggest Joke</button>
+          <SuggestionModal isOpen={modalOpen} setIsOpen={setModal} />
         </Jumbotron>
         <CardList>
           {data &&
